@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Banner with Header and Footer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+ /* header styles */
+  
+ .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    z-index: 1000; /* keeps header on top */
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ /*  Desktop view */
+  .logo-left img {
+    height: 60px;
+    width: 180px;
+    object-fit: contain;
+  }
+  
+  .logo-right img {
+    height: 60px;
+    width: 220px;
+    object-fit: contain;
+  }
+  
+  /* ✅ Mobile view */
+  @media (max-width: 600px) {
+    .logo-left img {
+      height: 40px;
+      width: 120px;
+    }
+  
+    .logo-right img {
+      height: 40px;
+      width: 140px;
+    }
+  
+    .header-content {
+      padding: 0 10px;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+   
+  }
+  
+  body {
+    padding-top: 80px; 
+  }
+  
+  
+/* header styles  end  */
+
+       
+/* banner styles */
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.banner-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* form left side */
+
+
+
+/* form and right side image */
+
+.container {
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+/* Left side (empty) */
+.left-side {
+  flex: 1;
+  background-color: #fff;
+}
+
+/* Right side with image */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.right-side img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* testimonial styles */
+
+.testimonial-container {
+  display: flex;
+  justify-content: flex-start; /* align to left */
+  align-items: flex-start;
+ margin-bottom: 15px;
+
+}
+
+.testimonial img {
+  max-width: 95%;
+  height: auto;
+}
+
+
+/* footer styles */
+
+.custom-footer {
+    width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  position: relative;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-footer a {
+  color: #0033cc;
+  text-decoration: underline;
+}
+
+.custom-footer a:hover {
+  text-decoration: none;
+}
+
+/* form */
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-content">
+          <div class="logo-left">
+            <a href="index.html">
+            <img src="https://bussinessscale.com/bussinessscales_logo.png" alt="Tech Business Live Logo" />
+        </a> 
+        </div>
+          <div class="logo-right">
+            <img src="https://bussinessscale.com/manage_engine/images/logonew.png" alt="HubSpot Logo" />
+          </div>
+        </div>
+      </div>
+
+    <!-- Banner Section -->
+    <section class="banner-container">
+        <a target="_blank" href="https://www.amazon.in/Business-Gift-Cards-Vouchers/b/ref=rcontact_top_mweb?ie=UTF8&node=5620879031">
+            <img src="http://go.pardot.com/l/217392/2017-06-28/2nqnd/217392/25261/banner.jpg" alt="Banner Image">
+        </a>
+        
+    </section>
+<!------------------form and image--------------------------------->
+    <div class="container">
+        <div class="left-side">
+        </div>
+        <div class="right-side">
+            <a target="_blank" href="https://www.amazon.in/Business-Gift-Cards-Vouchers/b/ref=rcontact_top_mweb?ie=UTF8&node=5620879031">
+          <img src="http://go.pardot.com/l/217392/2017-07-04/2p168/217392/25647/right_img.jpg" alt="Amazon Gift Cards">
+            </a>
+        </div>
+      </div>
+
+
+
+      <!--------------------------------estimonial------------------------------------>
+
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <img src="http://go.pardot.com/l/217392/2017-06-28/2nqnj/217392/25265/test1.png" alt="Testimonial 1">
+        </div>
+        <div class="testimonial">
+          <img src="http://go.pardot.com/l/217392/2017-06-28/2nqnl/217392/25267/test2.png" alt="Testimonial 2">
+        </div>
+      </div>
+      
+<!-----------------------------------------footer--------------------------------------------------->
+<footer class="custom-footer">
+    <div class="footer-inner">
+      <p>
+        Copyright © 2025 Bussinessscale<br><br>
+        If you would like to change your communication preferences 
+        <a href="#">click here.</a>
+      </p>
+    </div>
+  </footer>
+  
+      
+
+   
+</body>
+</html>

@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="shortcut icon" href="https://moccasin-armadillo-165074.hostingersite.com/Amazon-favicon.png" type="image/x-icon" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,70 +22,8 @@
         }
 
        
- /* header styles */
+ 
   
- .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    
-    background-color: #fff;
-    padding: 10px 95px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    z-index: 1000; /* keeps header on top */
-  }
-  
-  .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
- /*  Desktop view */
-  .logo-left img {
-    height: 60px;
-    width: 180px;
-    object-fit: contain;
-  }
-  
-  .logo-right img {
-    height: 60px;
-    width: 220px;
-    object-fit: contain;
-  }
-  
-  /* ✅ Mobile view */
-  @media (max-width: 600px) {
-    .logo-left img {
-      height: 40px;
-      width: 120px;
-    }
-  
-    .logo-right img {
-      height: 40px;
-      width: 140px;
-    }
-  
-    .header-content {
-      padding: 0 10px;
-    }
-    .header{
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-   
-  }
-  
-  body {
-    padding-top: 80px; 
-  }
-  
-  
-/* header styles  end  */
 
        
 /* banner styles */
@@ -115,16 +55,32 @@
 
 
 
+/* second banner */
+
+
+.second-banner img{
+margin-top:20px;
+width:40%;
+margin-left:10px;
+}
+
 /* Container for form and right side image */
 .container {
   display: flex;
   flex-direction: row;
+  
 }
 
 /* Left side (empty) */
 .left-side {
   flex: 1;
+  display: flex;
+  margin-top: 50px;
+  
+  
 }
+
+ 
 
 /* Right side with image */
 .right-side {
@@ -138,41 +94,11 @@
 .right-side img {
   max-width: 100%;
   height: auto;
+  margin-top:-100px;
 }
 
-/* Testimonial styles */
-.testimonial-container {
-  display: flex;
-  justify-content: flex-start; /* align to left */
-  align-items: flex-start;
-  margin-bottom: 15px;
-}
 
-.testimonial img {
-  max-width: 95%;
-  height: auto;
-}
 
-/* Footer styles */
-.custom-footer {
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  background-color: #ffffff;
-  color: #333;
-  font-family: Arial, sans-serif;
-  position: relative;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.custom-footer a {
-  color: #0033cc;
-  text-decoration: underline;
-}
-
-.custom-footer a:hover {
-  text-decoration: none;
-}
 
 /* Form styles */
 .form-container {
@@ -199,12 +125,13 @@ form {
 }
 
 label {
-  width: 35%;
-  font-weight: bold;
+  width: 47%;
+  font-weight: regular;
   color: #333;
   text-align: right;
-  margin-right: 2px;
+  margin-right: 6px;
 }
+
 
 input[type="text"],
 select {
@@ -231,59 +158,76 @@ input[type="submit"] {
   margin-top: 20px;
 }
 
-/* Tablet and mobile view adjustments */
-@media screen and (max-width: 1024px) {
-  .container {
-    flex-direction: column; /* Stack elements vertically */
-  }
-  .header {
-    padding: 10px 40px;
-  }
-
-  .left-side {
-    flex: none; /* Remove flex-grow */
-    width: 100%; /* Full width */
-  }
-
-  .right-side {
-    flex: none; /* Remove flex-grow */
-    width: 100%; /* Full width */
-    padding: 10px; /* Adjust padding */
-  }
-
-  .form-container {
-    max-width: 90%; /* Adjust form width */
-    padding: 20px; /* Adjust padding */
-  }
-
-  .right-side img {
-    max-width: 100%; /* Ensure image is responsive */
-  }
-
-  .testimonial-container {
-    flex-direction: column; /* Stack testimonials vertically */
-    margin: 10px 0; /* Adjust margin */
-  }
-
-  input[type="text"],
-select {
-  width: 60%;
-  font-size: 14px;
-  padding: 4px 2px;
-  border: 1px solid #000000;
-  border-radius: 2px;
+/* Email error message */
+.error-message {
+  color: #d9534f;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+  margin-left: 28%;
 }
 
+ /* Mobile view improved adjustments */
+        @media screen and (max-width: 600px) {
+            .banner-container {
+                margin-top: 0px;
+            }
+            
+            .second-banner img {
+                width: 60%;
+                margin: 10px auto;
+                display: block;
+            }
+            
+            .container {
+                flex-direction: column;
+                padding: 0 10px;
+            }
+            
+            .left-side {
+                margin-top: 20px;
+                width: 100%;
+            }
+            
+            .form-container {
+                margin: 0 auto;
+                padding: 20px;
+                width: 100%;
+            }
+            
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+            
+            label {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+            
+            input[type="text"],
+            select {
+                width: 100%;
+                padding: 8px;
+                font-size: 14px;
+            }
+            
+            .error-message {
+                margin-left: 0;
+            }
+            
+            .right-side {
+                margin-top: 40px;
+            }
+            
+            .right-side img {
+                margin-top: 0;
+            }
+        }
 
-label {
-  width: 40%;
-  font-weight: bold;
-  color: #333;
-  text-align: right;
-  margin-right: 2px;
-}
-
-}
 
 
 
@@ -317,122 +261,99 @@ label {
   text-decoration: underline;
 }
 
+  /* Tablet view adjustments */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .header {
+                padding: 10px 40px;
+            }
 
+            .left-side {
+                flex: none;
+                width: 100%;
+            }
+
+            .right-side {
+                flex: none;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .form-container {
+                max-width: 90%;
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            .right-side img {
+                max-width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+
+            input[type="text"],
+            select {
+                width: 60%;
+            }
+
+            label {
+                width: 40%;
+            }
+        }
         
     </style>
 </head>
 <body>
     <!-- Header Section -->
-    <div class="header">
-        <div class="header-content">
-          <div class="logo-left">
-          
-            <img src="https://bussinessscale.com/bussinessscales_logo.png" alt="Tech Business Live Logo" />
-       
-        </div>
-          <div class="logo-right">
-            <img src="https://bussinessscale.com/manage_engine/images/logonew.png" alt="HubSpot Logo" />
-          </div>
-        </div>
-      </div>
+    
 
     <!-- Banner Section -->
     <section class="banner-container">
-       
+        <!--<a target="_blank" href="https://www.amazon.in/Business-Gift-Cards-Vouchers/b/ref=rcontact_top_mweb?ie=UTF8&node=5620879031"> -->
             <img src="http://go.pardot.com/l/217392/2017-06-28/2nqnd/217392/25261/banner.jpg" alt="Banner Image">
-       
+        </a>
         
     </section>
+	<div class="second-banner">
+	
+	<img src="https://moccasin-armadillo-165074.hostingersite.com/banner-amazon.png" alt="Amazon Gift Card Banner">
+	</div>
 <!------------------form and image--------------------------------->
     <div class="container">
+	
         <div class="left-side">
+              
+            
           
           <div class="form-container">
     <form action="https://formspree.io/f/xzzralwp" id="contact-form" method="POST" accept-charset="UTF-8">
       
       
       <div class="form-group">
-        <label class="required">Your Name<img src="required.gif"></label>
+        <label class="required">Your Name<img src="https://bussinessscale.com/amazon/required.gif"></label>
         <input type="text" name="your_name" required>
       </div>
 
-      <div class="form-group">
-        <label class="required">Organization Name<img src="required.gif"></label>
-        <input type="text" name="organization_name" required>
+     <div class="form-group">
+        <label class="required">Official E-mail id<img src="https://bussinessscale.com/amazon/required.gif"></label>
+        <input type="text" name="email" id="email" required>
+       
       </div>
 
       <div class="form-group">
-        <label class="required">Official E-mail id<img src="required.gif"></label>
-        <input type="text" name="email" required>
-      </div>
-
-      <div class="form-group">
-        <label class="required">Phone Number<img src="required.gif"></label>
+        <label class="required">Phone Number<img src="https://bussinessscale.com/amazon/required.gif"></label>
         <input type="text" name="phone" required>
       </div>
-
+      
       <div class="form-group">
-        <label class="required">City<img src="required.gif"></label>
-        <input type="text" name="city" required>
-      </div>
-
-      <div class="form-group">
-        <label class="required">Estimated Annual Gifting Spends(₹)<img src="required.gif"></label>
-        <input type="text" name="gifting_spend" required>
-      </div>
-
-      <div class="form-group">
-        <label class="required">Industry Type<img src="required.gif"></label>
-        <select name="industry_type" required>
-          <option value=""></option>
-          <option>Business Services</option>
-          <option>Construction</option>
-          <option>Consumer Products & Services</option>
-          <option>Education</option>
-          <option>Energy & Utilities</option>
-          <option>Financial Services</option>
-          <option>Government</option>
-          <option>Healthcare</option>
-          <option>Hospitality & Travel</option>
-          <option>Insurance</option>
-          <option>Manufacturing</option>
-          <option>Media & Broadcast</option>
-          <option>Mining</option>
-          <option>Non-Profit</option>
-          <option>Pharmaceuticals</option>
-          <option>Real Estate</option>
-          <option>Retail & Wholesale</option>
-          <option>IT & Technology</option>
-          <option>Sports</option>
-          <option>Arts & Entertainment</option>
-          <option>Telecommunication</option>
-          <option>Transportation</option>
-          <option>Agriculture</option>
-          <option>Others</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="required">Purpose of Gifting<img src="required.gif"></label>
-        <select name="gifting_purpose" required>
-          <option value=""></option>
-          <option>Sales Incentives</option>
-          <option>Consumer & Product promotion</option>
-          <option>Corporate/Bulk Requirement</option>
-          <option>Employee Rewards</option>
-          <option>Others</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Referral Code</label>
-        <input type="text" name="referral_code">
-      </div>
-
-      <div class="form-group">
-        <label>Remarks && Comments</label>
+        <label style="margin-right: 5px">Any Remarks</label>
         <input type="text" name="comments">
       </div>
+	  
+	   <div id="email-error" class="error-message">Please Enter your Bussiness Email Id.</div>
 
       <div class="submit-btn">
         <input type="submit" value="Submit">
@@ -441,49 +362,83 @@ label {
 
     <div id="thank-you-message"  style="display:none; margin-top: 20px;color: #000000;height: 50vh;">
   <p><strong>Thank you for showing interest!</strong></p>
-  <p>We will get in touch with you within 3 business days.</p>
-  <p>If you have an immediate Corporate requirement for Amazon Pay Gift Cards, please send us an email to <a href="mailto:amazon_corporategiftcards@concentrix.com">amazon_corporategiftcards@concentrix.com</a> or call us at 0124-6236000. Office hours: 10 AM to 6 PM (Monday to Friday).</p>
+  <p>We will get in touch with you within 1 business days.</p>
+  <p>If you have an immediate Corporate requirement for Amazon Pay Gift Cards, please send us an email to <a href="mailto:amazon_corporategiftcards@concentrix.com" style="font-size: 13px;">amazon_corporategiftcards@concentrix.com</a> or call us at 0124-6236000. Office hours: 10 AM to 6 PM (Monday to Friday).</p>
 </div>
   </div>
         </div>
         <div class="right-side">
-           
+           <!-- <a target="_blank" href="https://www.amazon.in/Business-Gift-Cards-Vouchers/b/ref=rcontact_top_mweb?ie=UTF8&node=5620879031"> -->
           <img src="http://go.pardot.com/l/217392/2017-07-04/2p168/217392/25647/right_img.jpg" alt="Amazon Gift Cards">
-           
+            </a>
         </div>
       </div>
 
 
 
-      <!--------------------------------estimonial------------------------------------>
-
-      <div class="testimonial-container">
-        <div class="testimonial">
-          <img src="http://go.pardot.com/l/217392/2017-06-28/2nqnj/217392/25265/test1.png" alt="Testimonial 1">
-        </div>
-        <div class="testimonial">
-          <img src="http://go.pardot.com/l/217392/2017-06-28/2nqnl/217392/25267/test2.png" alt="Testimonial 2">
-        </div>
-      </div>
+ 
       
 <!-----------------------------------------footer--------------------------------------------------->
-<footer class="custom-footer">
-    <div class="footer-inner">
-      <p>
-        Copyright © 2025 Bussinessscale<br><br>
-        If you would like to change your communication preferences 
-        <a href="#">click here.</a>
-      </p>
-    </div>
-  </footer>
+
   
       
+
+
 <script>
   const form = document.getElementById('contact-form');
   const thankYou = document.getElementById('thank-you-message');
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+  
+  // List of common public email domains to block
+  const publicDomains = [
+    'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 
+    'icloud.com', 'mail.com', 'protonmail.com', 'yandex.com', 'zoho.com',
+    'live.com', 'inbox.com', 'gmx.com', 'fastmail.com', 'tutanota.com',
+    'me.com', 'msn.com', 'rediffmail.com', 'proton.me'
+  ];
+  
+  // Check email on input
+  emailInput.addEventListener('blur', validateEmail);
+  emailInput.addEventListener('input', function() {
+    // Hide error when user starts typing again
+    emailError.style.display = 'none';
+  });
+  
+  function validateEmail() {
+    const email = emailInput.value.trim();
+    if (email === '') return; // Don't validate empty email
+    
+    // Check if it's a valid email format first
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      emailError.textContent = 'Please enter a valid email address.';
+      emailError.style.display = 'block';
+      return false;
+    }
+    
+    // Extract domain from email
+    const domain = email.split('@')[1].toLowerCase();
+    
+    // Check if domain is in the blocked list
+    if (publicDomains.includes(domain)) {
+      emailError.textContent = 'Please enter your business email.';
+      emailError.style.display = 'block';
+      return false;
+    }
+    
+    // Valid corporate email
+    emailError.style.display = 'none';
+    return true;
+  }
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    
+    // Validate email before submission
+    if (!validateEmail()) {
+      return; // Stop form submission if email is invalid
+    }
 
     const formData = new FormData(form);
 
